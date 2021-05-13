@@ -1,0 +1,20 @@
+/* not_message: ModeInfo,Mode */
+
+enum Mode
+{
+    Text = 0, 
+    Graphic = 1
+};
+
+struct ModeInfo 
+{
+    uint8 uses_color_palette : 1;
+    uint8 mode : 1;
+    uint8 used : 1;
+    uint8 id : 5;
+    uint16 resolution_width;
+    uint16 resolution_height;
+    uint16 color_depth;
+};
+
+
