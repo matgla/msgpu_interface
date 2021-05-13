@@ -52,12 +52,14 @@ if (NOT virtualenv_file_stamp)
     execute_process(
         COMMAND ${pip_exec} install -r ${CMAKE_CURRENT_SOURCE_DIR}/message_generator/requirements.txt --upgrade -q -q -q 
         WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+        COMMAND_ECHO STDOUT
         COMMAND_ERROR_IS_FATAL ANY 
     )
 
     execute_process(
         COMMAND cmake -E touch ${CMAKE_CURRENT_BINARY_DIR}/venv.stamp 
         WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+        COMMAND_ECHO STDOUT
         COMMAND_ERROR_IS_FATAL ANY 
     )
 
