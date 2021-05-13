@@ -64,8 +64,8 @@ if (NOT virtualenv_file_stamp)
 endif ()
 
 execute_process( 
-    COMMAND ${python_exec} ${PROJECT_SOURCE_DIR}/scripts/message_generator/generate.py 
-    --input ${PROJECT_SOURCE_DIR}/messages 
+    COMMAND ${python_exec} ${CMAKE_CURRENT_SOURCE_DIR}/message_generator/generate.py 
+    --input ${CMAKE_CURRENT_SOURCE_DIR}/definitions
     --enable-cpp 
     --enable-python
     --output-dir ${PROJECT_BINARY_DIR}/messages
@@ -86,4 +86,4 @@ set_property (DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
 set_property (DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
     ${CMAKE_CURRENT_SOURCE_DIR}/message_generator/python_generator.py)
 
-add_subdirectory(${PROJECT_SOURCE_DIR}/messages/cpp)
+add_subdirectory(${PROJECT_BINARY_DIR}/messages/cpp ${PROJECT_BINARY_DIR}/messages/cmake)
