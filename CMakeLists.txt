@@ -14,6 +14,27 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+cmake_minimum_required(VERSION 3.10)
+
+project (msgpu_interface CXX)
+
+find_package (Python3 COMPONENTS Interpreter) 
+
+include(FetchContent)
+
+FetchContent_Declare(
+  mspkg
+  GIT_REPOSITORY https://github.com/matgla/mspkg.git
+  GIT_TAG        master
+)
+
+FetchContent_MakeAvailable(mspkg)
+
+set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${mspkg_SOURCE_DIR}/cmake)
+include (mspkg)
+
+setup_mspkg(${mspkg_SOURCE_DIR})
+
 find_program (virtualenv_exec virtualenv)
 
 if (NOT virtualenv_exec)
@@ -89,3 +110,7 @@ set_property (DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
     ${CMAKE_CURRENT_SOURCE_DIR}/message_generator/python_generator.py)
 
 add_subdirectory(${PROJECT_BINARY_DIR}/messages/cpp ${PROJECT_BINARY_DIR}/messages/cmake)
+
+if (NOT DISABLE_TESTS)
+    add_subdirectory(tests/ut)
+endif()
