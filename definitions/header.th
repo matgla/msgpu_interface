@@ -1,8 +1,8 @@
 /* not_message:Header */
 struct Header {
+    uint8 start_flag;
     uint8 id;
-    // uint16 size;
-    // uint8 crc;
+    uint8 size;
 };
 
 
