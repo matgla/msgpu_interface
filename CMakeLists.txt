@@ -86,7 +86,7 @@ if (NOT virtualenv_file_stamp)
 
 endif ()
 
-if (NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/interface_generated AND NOT $ENV{REGENERATE_INTERFACE})
+if (NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/interface_generated OR DEFINED ENV{REGENERATE_INTERFACE})
     execute_process( 
         COMMAND ${python_exec} ${CMAKE_CURRENT_SOURCE_DIR}/message_generator/generate.py 
         --input ${CMAKE_CURRENT_SOURCE_DIR}/definitions
