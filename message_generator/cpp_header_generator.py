@@ -87,13 +87,15 @@ class CppHeaderGenerator:
                     else:
                         fields.append("    {type} {name};".format(type=self.convert_type(value.type), name=key))
                 else: 
+                    array_count = value.type.count 
+                    if array_count == 0:
+                        array_count = 1
                     if key != list(obj.lookup)[-1]:
                         fields.append("    {type} {name}[{count}];\n".format(type=self.convert_type(value.type), name=key,
-                            count=value.type.count))
+                            count=array_count))
                     else:
                         fields.append("    {type} {name}[{count}];".format(type=self.convert_type(value.type), name=key,
-                            count=value.type.count))
-
+                            count=array_count))
 
         s = """ 
 struct __attribute__((packed, aligned(1))) {name}
