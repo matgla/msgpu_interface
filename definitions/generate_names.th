@@ -1,0 +1,19 @@
+/* not_message: ObjectType */
+
+enum ObjectType 
+{
+    Buffer,
+    VertexArray
+};
+
+struct GenerateNamesRequest
+{
+    uint8_t elements;
+};
+
+struct GenerateNamesResponse
+{
+    uint8_t part_id;
+    uint8_t error_code;
+    uint16_t data[10];
+};
