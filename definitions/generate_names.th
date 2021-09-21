@@ -1,6 +1,6 @@
 /* not_message: ObjectType */
 
-enum ObjectType 
+enum ObjectType : uint8
 {
     Buffer,
     VertexArray
@@ -9,6 +9,7 @@ enum ObjectType
 struct GenerateNamesRequest
 {
     uint8 elements;
+    ObjectType type;
 };
 
 struct GenerateNamesResponse
