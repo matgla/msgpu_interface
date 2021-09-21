@@ -8,12 +8,12 @@ enum ObjectType
 
 struct GenerateNamesRequest
 {
-    uint8_t elements;
+    uint8 elements;
 };
 
 struct GenerateNamesResponse
 {
-    uint8_t part_id;
-    uint8_t error_code;
-    uint16_t data[10];
+    uint8 part_id;
+    uint8 error_code;
+    uint16 data[15];
 };
