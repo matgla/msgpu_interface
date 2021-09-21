@@ -9,7 +9,7 @@ enum ObjectType : uint8
 struct GenerateNamesRequest
 {
     uint8 elements;
-    ObjectType type;
+    uint8 type;
 };
 
 struct GenerateNamesResponse
