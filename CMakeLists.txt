@@ -114,6 +114,3 @@ set_property (DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
 
 add_subdirectory(${PROJECT_BINARY_DIR}/messages/cpp ${PROJECT_BINARY_DIR}/messages/cmake)
 
-if (NOT DISABLE_TESTS)
-    add_subdirectory(tests/ut)
-endif()
