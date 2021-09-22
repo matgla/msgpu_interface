@@ -2,8 +2,8 @@
 
 enum BindObjectType : uint8
 {
-    VertexArray,
-    Buffer
+    BindVertexArray,
+    BindBuffer
 };
 
 struct BindObject 
