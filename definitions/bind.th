@@ -10,6 +10,6 @@ struct BindObject
 {
     uint8 type;
     uint8 target;
-    uint16 id;
+    uint16 object_id;
 };
 
