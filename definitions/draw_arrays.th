@@ -1,0 +1,25 @@
+/* not_message: DrawArrayMode */ 
+
+enum DrawArrayMode : uint8 
+{
+    Points,
+    LineStrip,
+    LineLoop,
+    Lines,
+    LineStripAdjacency,
+    LinesAdjacency,
+    TriangleStrip,
+    TriangleFan,
+    Triangles,
+    TriangleStripAdjacency,
+    TrianglesAdjacency, 
+    Patches
+};
+
+struct DrawArrays
+{
+    uint8 mode; 
+    uint16 first;
+    uint16 count;
+};
+

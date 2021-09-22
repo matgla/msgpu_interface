@@ -1,0 +1,26 @@
+/* not_message: BufferDataUsage */
+
+enum BufferDataUsage : uint8 
+{
+    StreamDraw,
+    StreamRead,
+    StreamCopy,
+    StaticDraw,
+    StaticRead,
+    StaticCopy,
+    DynamicDraw,
+    DynamicRead,
+    DynamicCopy
+};
+
+struct WriteBufferData
+{
+    uint8 target : 7;
+    uint8 named  : 1;
+    uint8 usage;
+    uint8 size; 
+    uint8 part;
+    uint16 id;
+    uint8 data[24];
+};
+

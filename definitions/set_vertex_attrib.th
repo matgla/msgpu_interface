@@ -1,0 +1,9 @@
+struct SetVertexAttrib
+{
+    uint16 index;
+    uint8 size : 3;
+    uint8 normalized : 1;
+    uint8 type : 4;
+    uint32 stride;
+    uint32 pointer;
+};

@@ -1,0 +1,20 @@
+/* not_message: BindObjectBufferType */
+
+enum BufferTargetType : uint8 
+{
+    ArrayBuffer,
+    AtomicCounterBuffer,
+    CopyReadBuffer,
+    CopyWriteBuffer,
+    DispatchIndirectBuffer,
+    DrawIndirectBuffer,
+    ElementArrayBuffer,
+    PixelPackBuffer,
+    PixelUnpackBuffer,
+    QueryBuffer,
+    ShaderStorageBuffer,
+    TextureBuffer,
+    TransformFeedbackBuffer,
+    UniformBuffer
+};
+

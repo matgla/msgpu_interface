@@ -1,0 +1,15 @@
+/* not_message: BindObjectType, BindObjectBufferType */
+
+enum BindObjectType : uint8
+{
+    VertexArray,
+    Buffer
+};
+
+struct BindObject 
+{
+    uint8 type;
+    uint8 target;
+    uint16 id;
+};
+
