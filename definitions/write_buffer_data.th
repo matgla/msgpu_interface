@@ -15,12 +15,18 @@ enum BufferDataUsage : uint8
 
 struct WriteBufferData
 {
-    uint8 target : 7;
-    uint8 named  : 1;
-    uint8 usage;
     uint8 size; 
     uint8 part;
-    uint16 id;
-    uint8 data[24];
+    uint8 data[28];
+};
+
+struct PrepareForData
+{
+    uint8 named : 1;
+    uint8 target : 7;
+    uint8 usage; 
+    uint16 object_id;
+    uint32 size; 
+
 };
 
