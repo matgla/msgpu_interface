@@ -1,4 +1,12 @@
+/* not_message: ProgramWriteType */
+
+enum ProgramWriteType : uint8 
+{
+    VertexShader
+};
+
 struct BeginProgramWrite
 {
+    uint8 type;
     uint32 size; 
 };
