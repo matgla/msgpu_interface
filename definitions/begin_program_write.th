@@ -1,0 +1,4 @@
+struct BeginProgramWrite
+{
+    uint32 size; 
+};

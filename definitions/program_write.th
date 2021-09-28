@@ -1,0 +1,6 @@
+struct ProgramWrite 
+{
+    uint8 size; 
+    uint8 part;
+    uint8 data[28];
+};
