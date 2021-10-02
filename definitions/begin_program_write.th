@@ -7,6 +7,6 @@ enum ProgramWriteType : uint8
 
 struct BeginProgramWrite
 {
-    uint8 type;
+    uint8 program_id;
     uint32 size; 
 };
