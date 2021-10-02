@@ -1,0 +1,15 @@
+enum AllocateShaderType : uint8 
+{
+    VertexShader,
+    FragmentShader
+};
+
+struct AllocateShaderRequest 
+{
+    uint8 shader_type;
+};
+
+struct AllocateShaderResponse 
+{
+    uint8 shader_id;
+};
