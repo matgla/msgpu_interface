@@ -1,0 +1,16 @@
+enum AllocateProgramType : uint8 
+{
+    AllocateVertexShader,
+    AllocateFragmentShader,
+    AllocateProgram 
+};
+
+struct AllocateProgramRequest 
+{
+    uint8 program_type;
+};
+
+struct AllocateProgramResponse 
+{
+    uint8 program_id;
+};

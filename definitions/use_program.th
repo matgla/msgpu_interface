@@ -1,0 +1,4 @@
+struct UseProgram 
+{
+    uint8 program_id;
+};
