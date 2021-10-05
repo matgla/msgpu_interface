@@ -17,11 +17,15 @@
 
 #pragma once
 
+#include "vec4.hpp"
+
 extern "C"
 {
     constexpr int shader_in_arguments_size  = 5;
     constexpr int shader_out_arguments_size = 5;
     extern void **in_argument[shader_in_arguments_size];
     extern void **out_argument[shader_out_arguments_size];
+
+    extern vec4 gl_Position;
 
 } // extern "C"

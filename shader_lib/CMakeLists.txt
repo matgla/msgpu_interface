@@ -22,6 +22,7 @@ set(include_dir ${CMAKE_CURRENT_SOURCE_DIR}/include/shader)
 
 target_sources(msgpu_interface_shader
     PUBLIC 
+        ${include_dir}/shader.hpp
         ${include_dir}/vec3.hpp
         ${include_dir}/vec4.hpp
         ${include_dir}/globals.hpp
@@ -34,3 +35,5 @@ target_include_directories(msgpu_interface_shader
     PUBLIC 
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
+
+target_compile_options(msgpu_interface_shader PUBLIC -include ${include_dir}/shader.hpp)
