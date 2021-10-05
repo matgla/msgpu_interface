@@ -114,3 +114,4 @@ set_property (DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
 
 add_subdirectory(${PROJECT_BINARY_DIR}/messages/cpp ${PROJECT_BINARY_DIR}/messages/cmake)
 
+add_subdirectory(shader_lib)
