@@ -1,0 +1,11 @@
+struct PrepareForParameterData 
+{
+    int parameter_id;
+    uint16_t size;
+};
+
+struct WriteParameterData 
+{
+    uint8_t size; 
+    uint8_t data[31];
+};
