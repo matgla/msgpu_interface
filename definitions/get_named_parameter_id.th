@@ -1,5 +1,5 @@
 struct GetNamedParameterIdReq {
-    uint8_t program_id;
+    uint8 program_id;
     char name[20];
 };
 
