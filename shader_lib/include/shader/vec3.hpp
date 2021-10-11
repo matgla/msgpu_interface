@@ -17,14 +17,6 @@
 
 #pragma once
 
-extern "C"
-{
+#include <glm/glm.hpp>
 
-    struct vec3
-    {
-        float x;
-        float y;
-        float z;
-    };
-
-} // extern "C"
+using vec3 = glm::vec3;

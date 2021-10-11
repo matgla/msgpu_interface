@@ -1,0 +1,7 @@
+struct GetNamedParameterIdReq {
+    char name[20];
+};
+
+struct GetNamedParameterIdResp {
+    uint8 parameter_id;
+};

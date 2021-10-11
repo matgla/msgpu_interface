@@ -5,7 +5,6 @@
 
 #pragma once
 
-#include "globals.hpp"
-#include "mat4.hpp"
-#include "vec3.hpp"
-#include "vec4.hpp"
+#include <glm/glm.hpp>
+
+using mat4 = glm::mat4;

@@ -17,33 +17,6 @@
 
 #pragma once
 
-#include "vec3.hpp"
+#include "glm/glm.hpp"
 
-extern "C"
-{
-
-    struct vec4
-    {
-        vec4() = default;
-        vec4(const vec3 &v, float w_)
-            : x(v.x)
-            , y(v.y)
-            , z(v.z)
-            , w(w_)
-        {
-        }
-        vec4(float x_, float y_, float z_, float w_)
-            : x(x_)
-            , y(y_)
-            , z(z_)
-            , w(w_)
-        {
-        }
-
-        float x;
-        float y;
-        float z;
-        float w;
-    };
-
-} // extern "C"
+using vec4 = glm::vec4;

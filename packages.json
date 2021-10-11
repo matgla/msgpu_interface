@@ -6,8 +6,14 @@
             "version": "release-1.10.0",
             "directory": "gtest",
             "target": "gtest",
-            "options": {
-            }
+            "options": {}
+        },
+        {
+            "link": "https://github.com/g-truc/glm.git",
+            "type": "git",
+            "version": "0.9.9.8",
+            "target": "glm",
+            "options": {}
         }
     ]
 }

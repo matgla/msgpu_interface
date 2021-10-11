@@ -27,6 +27,6 @@ struct PrepareForData
     uint8 usage; 
     uint16 object_id;
     uint32 size; 
-
+    char name[24];
 };
 
